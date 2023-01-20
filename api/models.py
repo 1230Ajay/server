@@ -14,12 +14,18 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
+    def delete(self,*args,**kwargs):
+        self.n.delete()
+        super().delete(*args, **kwargs)
+
 class Cats(models.Model):
     name = models.CharField(max_length=200,primary_key=True)
     
 
     def __str__(self):
         return self.name
+
+   
 
 
 class Contents(models.Model):
@@ -31,6 +37,10 @@ class Contents(models.Model):
     
     def __str__(self):
         return self.title
+    
+    def delete(self,*args,**kwargs):
+        self.image.delete()
+        super().delete(*args, **kwargs)
 
 
 
@@ -43,3 +53,7 @@ class Services(models.Model):
   
     def __str__(self):
         return self.ser
+
+    def delete(self,*args,**kwargs):
+        self.icon.delete()
+        super().delete(*args, **kwargs)
