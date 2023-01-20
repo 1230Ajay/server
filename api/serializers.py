@@ -1,11 +1,6 @@
 from rest_framework import serializers
 from .models import *
 
-class catsSerializer(serializers.HyperlinkedModelSerializer):
-    id = serializers.ReadOnlyField()
-    class Meta:
-        model = Cats
-        fields = '__all__'
 
 
 class contentsSerializer(serializers.HyperlinkedModelSerializer):

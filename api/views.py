@@ -4,9 +4,6 @@ from rest_framework import viewsets
 from .serializers import *
 
 # Create your views here.
-class catsViewSet(viewsets.ModelViewSet):
-    queryset = Cats.objects.all()
-    serializer_class = catsSerializer
 
 class contentsViewSet(viewsets.ModelViewSet):
     queryset = Contents.objects.all()
