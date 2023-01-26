@@ -38,6 +38,7 @@ class Contents(models.Model):
 
 
 
+
 class Services(models.Model):
     icon = models.FileField(upload_to="images")
     ser = models.CharField(max_length=200 , null=False , blank=False)

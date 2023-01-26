@@ -4,7 +4,7 @@ from rest_framework import routers
 from .views import *
 
 router = routers.DefaultRouter()
-router.register(r'Contents',contentsViewSet)
+router.register(r'Contents',contentsViewSet )
 router.register(r'Service',servicesViewSet)
 router.register(r'Profile',profileViewSet)
 
