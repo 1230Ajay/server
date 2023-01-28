@@ -6,3 +6,5 @@ from .models import *
 admin.site.register(Contents)
 admin.site.register(Profile)
 admin.site.register(Services)
+admin.site.register(Education)
+admin.site.register(Experience)

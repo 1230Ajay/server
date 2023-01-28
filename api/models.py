@@ -50,3 +50,20 @@ class Services(models.Model):
     def delete(self,*args,**kwargs):
         self.icon.delete()
         super().delete(*args, **kwargs)
+
+
+class Education(models.Model):
+    year = models.CharField(max_length=8, null=False, blank=False)
+    cource = models.CharField(max_length=200 , null=False , blank=False)
+    institute = models.CharField(max_length=200 , null=False , blank=False)
+  
+    def __str__(self):
+        return self.cource
+
+class Experience(models.Model):
+    year = models.CharField(max_length=20)
+    position = models.CharField(max_length=200 )
+    company = models.CharField(max_length=200 )
+  
+    def __str__(self):
+        return self.position
